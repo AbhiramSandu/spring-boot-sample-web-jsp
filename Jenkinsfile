@@ -22,12 +22,12 @@ pipeline {
   }
   stage('Deploy') {
    steps {
-    sh "java -jar target/my-app-1.0-SNAPSHOT.jar"
+    sh "java -jar target/spring-boot-parent*.war"
    }
   }
   stage('publish') {
    steps {
-    sh 'curl -X PUT -u admin:APB4oSbMxjG67dX7gZdt2oPHD4m -T target/my-app-1.0-SNAPSHOT.jar "http://52.42.121.49:8081/artifactory/libs-snapshot/my-app-1.0-SNAPSHOT.jar"'
+    sh 'curl -X PUT -u admin:APB4oSbMxjG67dX7gZdt2oPHD4m -T target/my-app-1.0-SNAPSHOT.jar "http://52.42.121.49:8081/artifactory/libs-snapshot/spring-boot-parent.jar"'
    }
   }
  }
