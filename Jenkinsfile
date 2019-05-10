@@ -10,7 +10,7 @@ pipeline {
     sh "mvn -B -DskipTests clean package"
    }
   }
- /* stage('UnitTest') {
+stage('UnitTest') {
    steps {
     sh "mvn test"
    }
@@ -19,7 +19,7 @@ pipeline {
      junit 'target/surefire-reports/*.xml'
     }
    }
-  }*/
+  }
   stage('Deploy') {
    steps {
     sh "java -jar target/spring-boot-parent*.war"
