@@ -37,8 +37,8 @@ import static org.junit.Assert.assertTrue;
  * @author Phillip Webb
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-//@SpringApplicationConfiguration(SampleWebJspApplication.class)
-//@WebIntegrationTest(randomPort = true)
+@SpringApplicationConfiguration(SampleWebJspApplication.class)
+@WebIntegrationTest(randomPort = true)
 @DirtiesContext
 public class SampleWebJspApplicationTests {
 
