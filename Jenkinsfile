@@ -25,7 +25,7 @@ stage('UnitTest') {
     sh 'pwd'
     sh 'ls -lrt'
     sh 'chmod 777 target/spring-boot-sample-web-jsp-*.war'
-    sh "java -jar target/spring-boot-parent*.war"
+    sh "java -jar target/spring-boot-sample-web-jsp-*.war"
    }
   }
   /*stage('publish') {
