@@ -22,6 +22,8 @@ stage('UnitTest') {
   }
   stage('Deploy') {
    steps {
+    sh 'pwd'
+    sh 'ls -lrt'
     sh "java -jar target/spring-boot-parent*.war"
    }
   }
